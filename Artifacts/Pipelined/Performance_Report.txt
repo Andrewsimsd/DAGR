@@ -1,0 +1,11 @@
+MACHINE LEARNING ALGORITHIM PERFORMANCE REPORT
+REPORT DATE: 12/09/2019, 21:38:17
+File: C:\Users\andre\Documents\DAGR\dagr_backend.py
+Author: Andrew Sims, Michael Hudson
+Copyright: None
+License: None
+Version: 0.2
+Maintainer: Andrew Sims, Michael Hudson
+E-Mail: andrew.sims.d@gmail.com
+Status: Prototype
+

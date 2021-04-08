@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>802</width>
+    <height>578</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DAGR</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>Input Data</string>
+       </attribute>
+       <widget class="QRadioButton" name="radioButton">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>141</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Contrived Dataset</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>60</y>
+          <width>121</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Existing Dataset</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Analysis</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>161</width>
+          <height>142</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Dataset Attributes</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QCheckBox" name="cb_dataset_attributes_all">
+           <property name="text">
+            <string>All</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_feature_box_and_whisker">
+           <property name="text">
+            <string>Feature Box and  Whisker</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_correlation_matrix">
+           <property name="text">
+            <string>Correlation Matrix</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_feature_histogram">
+           <property name="text">
+            <string>Feature Histograms</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_raw_features">
+           <property name="text">
+            <string>Raw Features</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_scatter_matrix">
+           <property name="text">
+            <string>Scatter Matrix</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>20</y>
+          <width>153</width>
+          <height>257</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Machine Learning Algorithims</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QCheckBox" name="cb_mla_all">
+           <property name="text">
+            <string>All</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_adaboost">
+           <property name="text">
+            <string>AdaBoost</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_dtc">
+           <property name="text">
+            <string>Decision Tree Classifier</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_gaussian_process">
+           <property name="text">
+            <string>Gaussian Process</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_linear_svm">
+           <property name="text">
+            <string>Linear SVM</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_naive_bayes">
+           <property name="text">
+            <string>Naive Bayes</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_nearest_neighbors">
+           <property name="text">
+            <string>Nearest Neighbors</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_neural_network">
+           <property name="text">
+            <string>Neural Network</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_qda">
+           <property name="text">
+            <string>QDA</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_random_forest">
+           <property name="text">
+            <string>Random Forest</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_rbf_svm">
+           <property name="text">
+            <string>RBF SVM</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="pb_begin_analysis">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>420</y>
+          <width>141</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Begin Analysis</string>
+        </property>
+       </widget>
+       <widget class="QProgressBar" name="dataset_prog">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>170</y>
+          <width>161</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="value">
+         <number>24</number>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Dataset Analysis</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QWidget" name="dataset_mpl_window" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="dataset_mplvl"/>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="dataset_mpl_figs">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>Algorithim Performance</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QWidget" name="algorithim_mpl_window" native="true">
+          <layout class="QVBoxLayout" name="algorithim_mplvl"/>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="algorithim_mpl_figs">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_9">
+       <attribute name="title">
+        <string>HTML</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout"/>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>802</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cb_dataset_attributes_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_feature_box_and_whisker</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>65</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>73</x>
+     <y>122</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_dataset_attributes_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_correlation_matrix</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>102</x>
+     <y>142</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_dataset_attributes_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_feature_histogram</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>141</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_dataset_attributes_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_raw_features</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>150</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>124</x>
+     <y>183</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_dataset_attributes_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_scatter_matrix</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>110</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_mla_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_adaboost</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>247</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>253</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_mla_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_dtc</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>102</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>279</x>
+     <y>145</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_mla_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_gaussian_process</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>305</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_mla_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_linear_svm</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>102</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>324</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_mla_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_naive_bayes</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>340</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>336</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_mla_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_nearest_neighbors</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>103</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>276</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_mla_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_neural_network</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>265</x>
+     <y>102</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_mla_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_qda</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>288</x>
+     <y>271</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_mla_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_random_forest</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>235</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>235</x>
+     <y>292</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_mla_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_random_forest</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>350</x>
+     <y>105</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>343</x>
+     <y>292</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_mla_all</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_rbf_svm</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>315</x>
+     <y>105</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>302</x>
+     <y>314</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
