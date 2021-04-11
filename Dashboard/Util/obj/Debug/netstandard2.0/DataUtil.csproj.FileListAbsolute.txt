@@ -1,9 +1,0 @@
-C:\Users\andre\source\repos\Dashboard\Util\bin\Debug\netstandard2.0\DataUtil.deps.json
-C:\Users\andre\source\repos\Dashboard\Util\bin\Debug\netstandard2.0\DataUtil.dll
-C:\Users\andre\source\repos\Dashboard\Util\bin\Debug\netstandard2.0\DataUtil.pdb
-C:\Users\andre\source\repos\Dashboard\Util\obj\Debug\netstandard2.0\DataUtil.csprojAssemblyReference.cache
-C:\Users\andre\source\repos\Dashboard\Util\obj\Debug\netstandard2.0\DataUtil.AssemblyInfoInputs.cache
-C:\Users\andre\source\repos\Dashboard\Util\obj\Debug\netstandard2.0\DataUtil.AssemblyInfo.cs
-C:\Users\andre\source\repos\Dashboard\Util\obj\Debug\netstandard2.0\DataUtil.csproj.CoreCompileInputs.cache
-C:\Users\andre\source\repos\Dashboard\Util\obj\Debug\netstandard2.0\DataUtil.dll
-C:\Users\andre\source\repos\Dashboard\Util\obj\Debug\netstandard2.0\DataUtil.pdb
