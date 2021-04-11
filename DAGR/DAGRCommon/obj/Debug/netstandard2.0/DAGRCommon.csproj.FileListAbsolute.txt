@@ -1,0 +1,12 @@
+F:\Github\DAGR\DAGR\DAGRCommon\bin\Debug\netstandard2.0\DAGRCommon.deps.json
+F:\Github\DAGR\DAGR\DAGRCommon\bin\Debug\netstandard2.0\DAGRCommon.dll
+F:\Github\DAGR\DAGR\DAGRCommon\bin\Debug\netstandard2.0\DAGRCommon.pdb
+F:\Github\DAGR\DAGR\DAGRCommon\bin\Debug\netstandard2.0\DataUtil.dll
+F:\Github\DAGR\DAGR\DAGRCommon\bin\Debug\netstandard2.0\DataUtil.pdb
+F:\Github\DAGR\DAGR\DAGRCommon\obj\Debug\netstandard2.0\DAGRCommon.csprojAssemblyReference.cache
+F:\Github\DAGR\DAGR\DAGRCommon\obj\Debug\netstandard2.0\DAGRCommon.AssemblyInfoInputs.cache
+F:\Github\DAGR\DAGR\DAGRCommon\obj\Debug\netstandard2.0\DAGRCommon.AssemblyInfo.cs
+F:\Github\DAGR\DAGR\DAGRCommon\obj\Debug\netstandard2.0\DAGRCommon.csproj.CoreCompileInputs.cache
+F:\Github\DAGR\DAGR\DAGRCommon\obj\Debug\netstandard2.0\DAGRCommon.csproj.CopyComplete
+F:\Github\DAGR\DAGR\DAGRCommon\obj\Debug\netstandard2.0\DAGRCommon.dll
+F:\Github\DAGR\DAGR\DAGRCommon\obj\Debug\netstandard2.0\DAGRCommon.pdb

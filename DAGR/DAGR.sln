@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAGR", "Dashboard\DAGR.csproj", "{E5D4049E-5D3B-427D-B437-1DD42BEDFA05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataUtil", "Util\DataUtil.csproj", "{D38BA6E3-0849-40B6-9F40-C61866CA0E71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAGRCommon", "DAGRCommon\DAGRCommon.csproj", "{EA8144EF-AA50-4FC4-9BAC-FF043DA6314C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5D4049E-5D3B-427D-B437-1DD42BEDFA05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5D4049E-5D3B-427D-B437-1DD42BEDFA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5D4049E-5D3B-427D-B437-1DD42BEDFA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5D4049E-5D3B-427D-B437-1DD42BEDFA05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D38BA6E3-0849-40B6-9F40-C61866CA0E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D38BA6E3-0849-40B6-9F40-C61866CA0E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D38BA6E3-0849-40B6-9F40-C61866CA0E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D38BA6E3-0849-40B6-9F40-C61866CA0E71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA8144EF-AA50-4FC4-9BAC-FF043DA6314C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA8144EF-AA50-4FC4-9BAC-FF043DA6314C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA8144EF-AA50-4FC4-9BAC-FF043DA6314C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA8144EF-AA50-4FC4-9BAC-FF043DA6314C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0E31702-F057-46D0-B71C-D55715899482}
+	EndGlobalSection
+EndGlobal
