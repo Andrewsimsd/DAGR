@@ -85,9 +85,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomTabControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="CustomTabControl.cs" />
     <Compile Include="DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
