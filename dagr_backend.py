@@ -208,7 +208,7 @@ def plot_algorithim_accuracy(df, feature_names, models):
     names = []  
     for model in models:
         name = model.steps[-1][0]
-        kfold = model_selection.KFold(n_splits=10, random_state=seed)
+        kfold = model_selection.KFold(n_splits=10, shuffle = True, random_state=seed)
         cv_results = model_selection.cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
         results.append(cv_results)
         names.append(name)
