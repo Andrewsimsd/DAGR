@@ -3,3 +3,4 @@
 *.pyc
 *.png
 DAGR/.vs/DAGR/v16/.suo
+*.cache
