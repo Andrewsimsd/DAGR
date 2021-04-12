@@ -14,6 +14,7 @@ using LiveCharts.Wpf;
 using System.Threading;
 using DataUtil;
 using DAGRCommon;
+using ScottPlot;
 
 namespace DAGR
 {
@@ -31,7 +32,7 @@ namespace DAGR
             // Debugging relative path dataset
             // Navaigate back up from 'debug' and into datasets directory for relative pathing
             string datasetPath = Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName,
-                @"datasets\dataset_100.csv");
+                @"datasets\dataset_1000000.csv");
 
             tbImportFile.Text = datasetPath;            
         }
@@ -43,47 +44,6 @@ namespace DAGR
             pnlNav.Left = btnImportData.Left;
             btnImportData.BackColor = DAGRCommon.DAGRCommon.BACKGROUNDCOLOR1;
             customTabControl1.SelectedTab = tabImportData;
-            cartesianChartYaw.Zoom = ZoomingOptions.X;
-            cartesianChartYaw.Pan = PanningOptions.X;
-            cartesianChartRoll.Zoom = ZoomingOptions.X;
-            cartesianChartRoll.Pan = PanningOptions.X;
-            cartesianChartPitch.Zoom = ZoomingOptions.X;
-            cartesianChartPitch.Pan = PanningOptions.X;
-            cartesianChartAltitude.Zoom = ZoomingOptions.X;
-            cartesianChartAltitude.Pan = PanningOptions.X;
-
-            cartesianChartYaw.AxisY.Add(new Axis
-            {
-                Title = "Yaw (°)",
-            });
-            cartesianChartYaw.AxisX.Add(new Axis
-            {
-                Title = "Time (HH:MM:SS)",
-            });
-            cartesianChartRoll.AxisY.Add(new Axis
-            {
-                Title = "Roll (°)",
-            });
-            cartesianChartRoll.AxisX.Add(new Axis
-            {
-                Title = "Time (HH:MM:SS)",
-            });
-            cartesianChartAltitude.AxisY.Add(new Axis
-            {
-                Title = "Altitude (Feet)",
-            });
-            cartesianChartAltitude.AxisX.Add(new Axis
-            {
-                Title = "Time (HH:MM:SS)",
-            });
-            cartesianChartPitch.AxisY.Add(new Axis
-            {
-                Title = "Pitch (°)",
-            });
-            cartesianChartPitch.AxisX.Add(new Axis
-            {
-                Title = "Time (HH:MM:SS)",
-            });
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -145,12 +105,12 @@ namespace DAGR
                 tbImportFile.Text = ofd.FileName;
             }
         }
-
         private void btnLoad_Click(object sender, EventArgs e)
         {
             dagrCommon.flightDataList = DataUtil.DAGRReader.ReadFlightData(tbImportFile.Text);
-            //Ideally this will actually check if it did load in the data correctly or not
+            //TODO Ideally this will actually check if it did load in the data correctly or not
             MessageBox.Show("Successfully loaded data");
+            //On error of readflightdata, flightdatalist will be empty
             UpdateCharts(dagrCommon.flightDataList);
         }
 
@@ -160,44 +120,50 @@ namespace DAGR
             //updateAltitudeChartThread.SetApartmentState(ApartmentState.STA);
             //updateAltitudeChartThread.Start();
 
-            cartesianChartAltitude.Series = new SeriesCollection
-            {
-                new LineSeries
-                {
-                    Title = "Aircraft 1",
-                    Values = new ChartValues<float>(flightDataList.Select(x => x.Altitude).ToArray()),
-                    PointGeometry = null
-                },
-            };
-            cartesianChartPitch.Series = new SeriesCollection
-            {
-                new LineSeries
-                {
-                    Title = "Aircraft 1",
-                    Values = new ChartValues<float>(flightDataList.Select(x => x.Pitch).ToArray()),
-                    PointGeometry = null
-                },
-            };
+            string attrName = "Altitude";
+            // formsPlotAltVsTime
 
-            cartesianChartRoll.Series = new SeriesCollection
-            {
-                new LineSeries
-                {
-                    Title = "Aircraft 1",
-                    Values = new ChartValues<float>(flightDataList.Select(x => x.Roll).ToArray()),
-                    PointGeometry = null
-                },
-            };
+            double[] dataToPlot = flightDataList.Select(x => x.Altitude).ToArray();
+            double[] altIndexes = Enumerable.Range(1, dataToPlot.Length).Select(x => (double)x).ToArray();
+            formsPlotAltVsTime.plt.PlotScatter(altIndexes, dataToPlot, label: attrName);
+            formsPlotAltVsTime.plt.Legend();
+            formsPlotAltVsTime.plt.Title(attrName + " vs Time");
+            formsPlotAltVsTime.plt.YLabel(attrName);
+            formsPlotAltVsTime.plt.XLabel("Time");
 
-            cartesianChartYaw.Series = new SeriesCollection
-            {
-                new LineSeries
-                {
-                    Title = "Aircraft 1",
-                    Values = new ChartValues<float>(flightDataList.Select(x => x.Yaw).ToArray()),
-                    PointGeometry = null
-                },
-            };
+            //new ScottPlot.FormsPlotViewer(plt).Show();
+            formsPlotAltVsTime.Render();
+
+            // formsPlotPitchVsTime
+            attrName = "Pitch";
+            dataToPlot = flightDataList.Select(x => x.Pitch).ToArray();            
+            formsPlotPitchVsTime.plt.PlotScatter(altIndexes, dataToPlot, label: attrName);
+            formsPlotPitchVsTime.plt.Legend();
+            formsPlotPitchVsTime.plt.Title(attrName + " vs Time");
+            formsPlotPitchVsTime.plt.YLabel(attrName);
+            formsPlotPitchVsTime.plt.XLabel("Time");
+            formsPlotPitchVsTime.Render();
+
+            // formsPlotRollVsTime
+            attrName = "Roll";
+            dataToPlot = flightDataList.Select(x => x.Roll).ToArray();            
+            formsPlotRollVsTime.plt.PlotScatter(altIndexes, dataToPlot, label: attrName);
+            formsPlotRollVsTime.plt.Legend();
+            formsPlotRollVsTime.plt.Title(attrName + " vs Time");
+            formsPlotRollVsTime.plt.YLabel(attrName);
+            formsPlotRollVsTime.plt.XLabel("Time");
+            formsPlotRollVsTime.Render();
+
+            // 
+            attrName = "Yaw";
+            dataToPlot = flightDataList.Select(x => x.Yaw).ToArray();            
+            formsPlotYawVsTime.plt.PlotScatter(altIndexes, dataToPlot, label: attrName);
+            formsPlotYawVsTime.plt.Legend();
+            formsPlotYawVsTime.plt.Title(attrName + " vs Time");
+            formsPlotYawVsTime.plt.YLabel(attrName);
+            formsPlotYawVsTime.plt.XLabel("Time");
+            formsPlotYawVsTime.Render();
+
 
         }
         //private void UpdateAltitudeChart(List<float> data)

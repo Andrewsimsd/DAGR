@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
@@ -36,36 +37,24 @@
             this.btnImportData = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.customTabControl1 = new global::DAGR.CustomTabControl();
+            this.customTabControl1 = new DAGR.CustomTabControl();
             this.tabDashboard = new System.Windows.Forms.TabPage();
             this.tabAnalysis = new System.Windows.Forms.TabPage();
             this.tableLayoutPanelMaster = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanelYaw = new System.Windows.Forms.TableLayoutPanel();
-            this.labelYaw = new System.Windows.Forms.Label();
-            this.cartesianChartYaw = new LiveCharts.WinForms.CartesianChart();
-            this.tableLayoutPanelRoll = new System.Windows.Forms.TableLayoutPanel();
-            this.labelRoll = new System.Windows.Forms.Label();
-            this.cartesianChartRoll = new LiveCharts.WinForms.CartesianChart();
-            this.tableLayoutPanelPitch = new System.Windows.Forms.TableLayoutPanel();
-            this.labelPitch = new System.Windows.Forms.Label();
-            this.cartesianChartPitch = new LiveCharts.WinForms.CartesianChart();
-            this.tableLayoutPanelAltitude = new System.Windows.Forms.TableLayoutPanel();
-            this.labelAltitude = new System.Windows.Forms.Label();
-            this.cartesianChartAltitude = new LiveCharts.WinForms.CartesianChart();
             this.tabImportData = new System.Windows.Forms.TabPage();
             this.btnLoad = new System.Windows.Forms.Button();
             this.tbImportFile = new System.Windows.Forms.TextBox();
             this.btnBrowse = new System.Windows.Forms.Button();
+            this.formsPlotAltVsTime = new ScottPlot.FormsPlot();
+            this.formsPlotPitchVsTime = new ScottPlot.FormsPlot();
+            this.formsPlotRollVsTime = new ScottPlot.FormsPlot();
+            this.formsPlotYawVsTime = new ScottPlot.FormsPlot();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.customTabControl1.SuspendLayout();
             this.tabAnalysis.SuspendLayout();
             this.tableLayoutPanelMaster.SuspendLayout();
-            this.tableLayoutPanelYaw.SuspendLayout();
-            this.tableLayoutPanelRoll.SuspendLayout();
-            this.tableLayoutPanelPitch.SuspendLayout();
-            this.tableLayoutPanelAltitude.SuspendLayout();
             this.tabImportData.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -220,10 +209,10 @@
             this.tableLayoutPanelMaster.ColumnCount = 2;
             this.tableLayoutPanelMaster.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMaster.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelMaster.Controls.Add(this.tableLayoutPanelYaw, 1, 1);
-            this.tableLayoutPanelMaster.Controls.Add(this.tableLayoutPanelRoll, 0, 1);
-            this.tableLayoutPanelMaster.Controls.Add(this.tableLayoutPanelPitch, 1, 0);
-            this.tableLayoutPanelMaster.Controls.Add(this.tableLayoutPanelAltitude, 0, 0);
+            this.tableLayoutPanelMaster.Controls.Add(this.formsPlotYawVsTime, 1, 1);
+            this.tableLayoutPanelMaster.Controls.Add(this.formsPlotRollVsTime, 0, 1);
+            this.tableLayoutPanelMaster.Controls.Add(this.formsPlotPitchVsTime, 1, 0);
+            this.tableLayoutPanelMaster.Controls.Add(this.formsPlotAltVsTime, 0, 0);
             this.tableLayoutPanelMaster.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMaster.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanelMaster.Name = "tableLayoutPanelMaster";
@@ -232,154 +221,6 @@
             this.tableLayoutPanelMaster.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelMaster.Size = new System.Drawing.Size(1056, 763);
             this.tableLayoutPanelMaster.TabIndex = 11;
-            // 
-            // tableLayoutPanelYaw
-            // 
-            this.tableLayoutPanelYaw.ColumnCount = 1;
-            this.tableLayoutPanelYaw.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelYaw.Controls.Add(this.labelYaw, 0, 0);
-            this.tableLayoutPanelYaw.Controls.Add(this.cartesianChartYaw, 0, 1);
-            this.tableLayoutPanelYaw.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelYaw.Location = new System.Drawing.Point(531, 384);
-            this.tableLayoutPanelYaw.Name = "tableLayoutPanelYaw";
-            this.tableLayoutPanelYaw.RowCount = 2;
-            this.tableLayoutPanelYaw.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanelYaw.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanelYaw.Size = new System.Drawing.Size(522, 376);
-            this.tableLayoutPanelYaw.TabIndex = 12;
-            // 
-            // labelYaw
-            // 
-            this.labelYaw.AutoSize = true;
-            this.labelYaw.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelYaw.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelYaw.ForeColor = System.Drawing.Color.White;
-            this.labelYaw.Location = new System.Drawing.Point(3, 0);
-            this.labelYaw.Name = "labelYaw";
-            this.labelYaw.Size = new System.Drawing.Size(516, 37);
-            this.labelYaw.TabIndex = 14;
-            this.labelYaw.Text = "Yaw vs. Time";
-            this.labelYaw.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cartesianChartYaw
-            // 
-            this.cartesianChartYaw.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesianChartYaw.Location = new System.Drawing.Point(3, 40);
-            this.cartesianChartYaw.Name = "cartesianChartYaw";
-            this.cartesianChartYaw.Size = new System.Drawing.Size(516, 333);
-            this.cartesianChartYaw.TabIndex = 5;
-            this.cartesianChartYaw.Text = "cartesianChart1";
-            // 
-            // tableLayoutPanelRoll
-            // 
-            this.tableLayoutPanelRoll.ColumnCount = 1;
-            this.tableLayoutPanelRoll.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelRoll.Controls.Add(this.labelRoll, 0, 0);
-            this.tableLayoutPanelRoll.Controls.Add(this.cartesianChartRoll, 0, 1);
-            this.tableLayoutPanelRoll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelRoll.Location = new System.Drawing.Point(3, 384);
-            this.tableLayoutPanelRoll.Name = "tableLayoutPanelRoll";
-            this.tableLayoutPanelRoll.RowCount = 2;
-            this.tableLayoutPanelRoll.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanelRoll.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanelRoll.Size = new System.Drawing.Size(522, 376);
-            this.tableLayoutPanelRoll.TabIndex = 14;
-            // 
-            // labelRoll
-            // 
-            this.labelRoll.AutoSize = true;
-            this.labelRoll.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelRoll.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRoll.ForeColor = System.Drawing.Color.White;
-            this.labelRoll.Location = new System.Drawing.Point(3, 0);
-            this.labelRoll.Name = "labelRoll";
-            this.labelRoll.Size = new System.Drawing.Size(516, 30);
-            this.labelRoll.TabIndex = 13;
-            this.labelRoll.Text = "Roll vs. Time";
-            this.labelRoll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cartesianChartRoll
-            // 
-            this.cartesianChartRoll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesianChartRoll.Location = new System.Drawing.Point(3, 40);
-            this.cartesianChartRoll.Name = "cartesianChartRoll";
-            this.cartesianChartRoll.Size = new System.Drawing.Size(516, 333);
-            this.cartesianChartRoll.TabIndex = 3;
-            this.cartesianChartRoll.Text = "cartesianChart1";
-            // 
-            // tableLayoutPanelPitch
-            // 
-            this.tableLayoutPanelPitch.ColumnCount = 1;
-            this.tableLayoutPanelPitch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelPitch.Controls.Add(this.labelPitch, 0, 0);
-            this.tableLayoutPanelPitch.Controls.Add(this.cartesianChartPitch, 0, 1);
-            this.tableLayoutPanelPitch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelPitch.Location = new System.Drawing.Point(531, 3);
-            this.tableLayoutPanelPitch.Name = "tableLayoutPanelPitch";
-            this.tableLayoutPanelPitch.RowCount = 2;
-            this.tableLayoutPanelPitch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanelPitch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanelPitch.Size = new System.Drawing.Size(522, 375);
-            this.tableLayoutPanelPitch.TabIndex = 13;
-            // 
-            // labelPitch
-            // 
-            this.labelPitch.AutoSize = true;
-            this.labelPitch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelPitch.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPitch.ForeColor = System.Drawing.Color.White;
-            this.labelPitch.Location = new System.Drawing.Point(3, 0);
-            this.labelPitch.Name = "labelPitch";
-            this.labelPitch.Size = new System.Drawing.Size(516, 30);
-            this.labelPitch.TabIndex = 13;
-            this.labelPitch.Text = "Pitch vs. Time";
-            this.labelPitch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cartesianChartPitch
-            // 
-            this.cartesianChartPitch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesianChartPitch.Location = new System.Drawing.Point(3, 40);
-            this.cartesianChartPitch.Name = "cartesianChartPitch";
-            this.cartesianChartPitch.Size = new System.Drawing.Size(516, 332);
-            this.cartesianChartPitch.TabIndex = 4;
-            this.cartesianChartPitch.Text = "cartesianChart1";
-            // 
-            // tableLayoutPanelAltitude
-            // 
-            this.tableLayoutPanelAltitude.ColumnCount = 1;
-            this.tableLayoutPanelAltitude.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelAltitude.Controls.Add(this.labelAltitude, 0, 0);
-            this.tableLayoutPanelAltitude.Controls.Add(this.cartesianChartAltitude, 0, 1);
-            this.tableLayoutPanelAltitude.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelAltitude.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanelAltitude.Name = "tableLayoutPanelAltitude";
-            this.tableLayoutPanelAltitude.RowCount = 2;
-            this.tableLayoutPanelAltitude.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanelAltitude.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanelAltitude.Size = new System.Drawing.Size(522, 375);
-            this.tableLayoutPanelAltitude.TabIndex = 12;
-            // 
-            // labelAltitude
-            // 
-            this.labelAltitude.AutoSize = true;
-            this.labelAltitude.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelAltitude.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAltitude.ForeColor = System.Drawing.Color.White;
-            this.labelAltitude.Location = new System.Drawing.Point(3, 0);
-            this.labelAltitude.Name = "labelAltitude";
-            this.labelAltitude.Size = new System.Drawing.Size(516, 30);
-            this.labelAltitude.TabIndex = 13;
-            this.labelAltitude.Text = "Altitude vs. Time";
-            this.labelAltitude.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cartesianChartAltitude
-            // 
-            this.cartesianChartAltitude.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesianChartAltitude.Location = new System.Drawing.Point(3, 40);
-            this.cartesianChartAltitude.Name = "cartesianChartAltitude";
-            this.cartesianChartAltitude.Size = new System.Drawing.Size(516, 332);
-            this.cartesianChartAltitude.TabIndex = 6;
-            this.cartesianChartAltitude.Text = "cartesianChart1";
             // 
             // tabImportData
             // 
@@ -425,7 +266,35 @@
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // DAGR
+            // formsPlotAltVsTime
+            // 
+            this.formsPlotAltVsTime.Location = new System.Drawing.Point(3, 3);
+            this.formsPlotAltVsTime.Name = "formsPlotAltVsTime";
+            this.formsPlotAltVsTime.Size = new System.Drawing.Size(522, 374);
+            this.formsPlotAltVsTime.TabIndex = 0;
+            // 
+            // formsPlotPitchVsTime
+            // 
+            this.formsPlotPitchVsTime.Location = new System.Drawing.Point(531, 3);
+            this.formsPlotPitchVsTime.Name = "formsPlotPitchVsTime";
+            this.formsPlotPitchVsTime.Size = new System.Drawing.Size(522, 374);
+            this.formsPlotPitchVsTime.TabIndex = 1;
+            // 
+            // formsPlotRollVsTime
+            // 
+            this.formsPlotRollVsTime.Location = new System.Drawing.Point(3, 384);
+            this.formsPlotRollVsTime.Name = "formsPlotRollVsTime";
+            this.formsPlotRollVsTime.Size = new System.Drawing.Size(522, 374);
+            this.formsPlotRollVsTime.TabIndex = 2;
+            // 
+            // formsPlotYawVsTime
+            // 
+            this.formsPlotYawVsTime.Location = new System.Drawing.Point(531, 384);
+            this.formsPlotYawVsTime.Name = "formsPlotYawVsTime";
+            this.formsPlotYawVsTime.Size = new System.Drawing.Size(522, 374);
+            this.formsPlotYawVsTime.TabIndex = 3;
+            // 
+            // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -434,23 +303,15 @@
             this.Controls.Add(this.customTabControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "DAGR";
+            this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DAGR";           
+            this.Text = "DAGR";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.customTabControl1.ResumeLayout(false);
             this.tabAnalysis.ResumeLayout(false);
             this.tableLayoutPanelMaster.ResumeLayout(false);
-            this.tableLayoutPanelYaw.ResumeLayout(false);
-            this.tableLayoutPanelYaw.PerformLayout();
-            this.tableLayoutPanelRoll.ResumeLayout(false);
-            this.tableLayoutPanelRoll.PerformLayout();
-            this.tableLayoutPanelPitch.ResumeLayout(false);
-            this.tableLayoutPanelPitch.PerformLayout();
-            this.tableLayoutPanelAltitude.ResumeLayout(false);
-            this.tableLayoutPanelAltitude.PerformLayout();
             this.tabImportData.ResumeLayout(false);
             this.tabImportData.PerformLayout();
             this.ResumeLayout(false);
@@ -471,22 +332,14 @@
         private System.Windows.Forms.TabPage tabDashboard;
         private System.Windows.Forms.TabPage tabAnalysis;
         private System.Windows.Forms.TabPage tabImportData;
-        private LiveCharts.WinForms.CartesianChart cartesianChartRoll;
-        private LiveCharts.WinForms.CartesianChart cartesianChartPitch;
-        private LiveCharts.WinForms.CartesianChart cartesianChartYaw;
         private System.Windows.Forms.TextBox tbImportFile;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.Button btnLoad;
-        private LiveCharts.WinForms.CartesianChart cartesianChartAltitude;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMaster;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelPitch;
-        private System.Windows.Forms.Label labelPitch;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelAltitude;
-        private System.Windows.Forms.Label labelAltitude;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelRoll;
-        private System.Windows.Forms.Label labelRoll;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelYaw;
-        private System.Windows.Forms.Label labelYaw;
+        private ScottPlot.FormsPlot formsPlotYawVsTime;
+        private ScottPlot.FormsPlot formsPlotRollVsTime;
+        private ScottPlot.FormsPlot formsPlotPitchVsTime;
+        private ScottPlot.FormsPlot formsPlotAltVsTime;
     }
 }
 

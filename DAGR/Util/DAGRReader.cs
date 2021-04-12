@@ -28,6 +28,7 @@ namespace DataUtil
             }
             else
             {
+                //TODO log and handle error since return of function is empty list
                 Console.WriteLine("File doesn't exist");                
             }
             return flightDataList;

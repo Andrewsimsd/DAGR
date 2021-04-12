@@ -12,16 +12,16 @@ namespace DataUtil
         /// Data members
         /// </summary>
         [Name("altitude")]
-        public float Altitude { get; set; }
+        public double Altitude { get; set; }
 
         [Name("pitch")]
-        public float Pitch { get; set; }
+        public double Pitch { get; set; }
 
         [Name("roll")]
-        public float Roll { get; set; }
+        public double Roll { get; set; }
 
         [Name("yaw")]
-        public float Yaw { get; set; }
+        public double Yaw { get; set; }
 
         /// <summary>
         /// Default constructor
@@ -38,15 +38,15 @@ namespace DataUtil
         /// </summary>
         public FlightData(string alt, string pit, string roll, string yaw)
         {
-            Altitude = float.Parse(alt);
-            Pitch = float.Parse(pit);
-            Roll = float.Parse(roll);
-            Yaw = float.Parse(yaw);
+            Altitude = double.Parse(alt);
+            Pitch = double.Parse(pit);
+            Roll = double.Parse(roll);
+            Yaw = double.Parse(yaw);
         }
         /// <summary>
         /// Float Converted constructor
         /// </summary>
-        public FlightData(float alt, float pit, float roll, float yaw)
+        public FlightData(double alt, double pit, double roll, double yaw)
         {
             Altitude = alt;
             Pitch = pit;

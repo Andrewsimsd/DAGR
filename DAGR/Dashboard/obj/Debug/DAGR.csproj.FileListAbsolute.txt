@@ -76,3 +76,6 @@ F:\Github\DAGR\DAGR\Dashboard\obj\Debug\DAGR.csproj.CoreCompileInputs.cache
 F:\Github\DAGR\DAGR\Dashboard\obj\Debug\DAGR.csproj.CopyComplete
 F:\Github\DAGR\DAGR\Dashboard\obj\Debug\DAGR.exe
 F:\Github\DAGR\DAGR\Dashboard\obj\Debug\DAGR.pdb
+F:\Github\DAGR\DAGR\Dashboard\bin\Debug\ScottPlot.dll
+F:\Github\DAGR\DAGR\Dashboard\bin\Debug\ScottPlot.WinForms.dll
+F:\Github\DAGR\DAGR\Dashboard\bin\Debug\System.Drawing.Common.dll
