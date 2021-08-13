@@ -48,7 +48,7 @@ matplotlib.use('Agg')
 
 __author__ = "Andrew Sims, Michael Hudson"
 __copyright__ = "None"
-__license__ = "None"
+__license__ = "License: BSD 3 clause"
 __version__ = "0.2"
 __maintainer__ = "Andrew Sims, Michael Hudson"
 __email__ = "andrew.sims.d@gmail.com"
@@ -701,7 +701,6 @@ def main():
 
             clf.fit(X_train, y_train)
             score = clf.score(X_test, y_test)
-    
             # Plot the decision boundary. For that, we will assign a color to each
             # point in the mesh [x_min, x_max]x[y_min, y_max].
             if hasattr(clf, "decision_function"):
